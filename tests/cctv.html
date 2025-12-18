@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Flow Monitoring</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cctv.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <i class="fas fa-traffic-light"></i>
+                <h2>Barangay (N/A) Traffic Management</h2>
+            </div>
+            <div class="sidebar-menu">
+                <div class="menu-item">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu-item active">
+                    <i class="fas fa-video"></i>
+                    <span>Traffic Monitoring</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-road"></i>
+                    <span>Road Conditions</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-car-crash"></i>
+                    <span>Accident Reports</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-route"></i>
+                    <span>Route Planning</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-traffic-light"></i>
+                    <span>Signal Control</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-bus"></i>
+                    <span>Public Transport</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-ticket-alt"></i>
+                    <span>Violation Tickets</span>
+                </div>
+                <div class="menu-item">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Top Navigation -->
+            <div class="top-nav">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search cameras, locations...">
+                </div>
+                <div class="user-info">
+                    <div class="user-avatar">JO</div>
+                    <div>
+                        <div style="font-weight: 500;">Juan Official</div>
+                        <div style="font-size: 12px; color: #666;">Barangay Captain</div>
+                    </div>
+                    <i class="fas fa-chevron-down" style="margin-left: 10px; cursor: pointer;"></i>
+                </div>
+            </div>
+            
+            <!-- Content Area -->
+            <div class="content-area">
+                <div class="module-header">
+                    <div>
+                        <h1>Traffic Flow Monitoring</h1>
+                        <p>Monitor real-time traffic conditions through CCTV cameras</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-sync-alt"></i> Refresh All Feeds
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Monitoring Layout -->
+                <div class="monitoring-container">
+                    <!-- CCTV Feed Panel -->
+                    <div class="monitoring-panel">
+                        <div class="panel-header">
+                            <h3>Live CCTV Feed</h3>
+                            <div class="panel-controls">
+                                <button class="control-btn" title="Fullscreen">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <button class="control-btn" title="Record">
+                                    <i class="fas fa-circle"></i>
+                                </button>
+                                <button class="control-btn" title="Take Snapshot">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="cctv-feed">
+                                <div class="cctv-placeholder">
+                                    <i class="fas fa-video"></i>
+                                    <h3>Road 123 - Camera 01</h3>
+                                    <p>Live feed will appear here</p>
+                                </div>
+                                <div class="cctv-info">
+                                    <div class="cctv-status">
+                                        <div class="status-indicator"></div>
+                                        <span>LIVE</span>
+                                    </div>
+                                    <div>
+                                        <span>12:45:23 PM</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- CCTV Map Panel -->
+                    <div class="monitoring-panel">
+                        <div class="panel-header">
+                            <h3>CCTV Locations Map</h3>
+                            <div class="panel-controls">
+                                <button class="control-btn" id="toggleListBtn" title="Show Camera List">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                                <button class="control-btn" title="Zoom In">
+                                    <i class="fas fa-search-plus"></i>
+                                </button>
+                                <button class="control-btn" title="Zoom Out">
+                                    <i class="fas fa-search-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="cctv-map">
+                                <div class="map-placeholder">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                    <h3>Barangay Traffic Map</h3>
+                                    <p>Interactive map showing CCTV locations</p>
+                                </div>
+                                
+                                <!-- CCTV Markers on Map -->
+                                <div class="cctv-marker" style="top: 30%; left: 25%;" data-camera="Road 456">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="cctv-marker" style="top: 45%; left: 60%;" data-camera="Market Road">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="cctv-marker" style="top: 65%; left: 40%;" data-camera="Road 789">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="cctv-marker" style="top: 35%; left: 75%;" data-camera="Barangay Entrance">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <div class="cctv-marker active" style="top: 55%; left: 20%;" data-camera="Road 123">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                            </div>
+                            
+                            <!-- CCTV List -->
+                            <div class="cctv-list" id="cctvList">
+                                <div class="cctv-list-item active">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <div>Road 456</div>
+                                        <div style="font-size: 12px; color: #666;">Junction of Main St and 1st Ave</div>
+                                    </div>
+                                </div>
+                                <div class="cctv-list-item">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <div>Market Road</div>
+                                        <div style="font-size: 12px; color: #666;">Near Public Market entrance</div>
+                                    </div>
+                                </div>
+                                <div class="cctv-list-item">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <div>Road 789</div>
+                                        <div style="font-size: 12px; color: #666;">In front of Elementary School</div>
+                                    </div>
+                                </div>
+                                <div class="cctv-list-item">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <div>Barangay Entrance</div>
+                                        <div style="font-size: 12px; color: #666;">Barangay exit to national highway</div>
+                                    </div>
+                                </div>
+                                <div class="cctv-list-item">
+                                    <i class="fas fa-video"></i>
+                                    <div>
+                                        <div>Road 123</div>
+                                        <div style="font-size: 12px; color: #666;">Approach to Barangay bridge</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src= "cctv.js"></script>
+</body>
+</html>

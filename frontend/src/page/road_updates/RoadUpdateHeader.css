@@ -1,0 +1,32 @@
+.road-ud-header {
+  background-color: var(--light-color);
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: var(--sidebar-w);
+  right: 0;
+  display: flex;
+}
+
+.road-ud-title-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  margin-left: 35px;
+}
+
+.header-title {
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--accent-color);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.header-title:hover {
+  transform: scale(1.08);
+}

@@ -1,13 +1,18 @@
 import { Sidebar } from "../sidebar/Sidebar";
 import './RoadUpdates.css';
-import '../../index.css' 
+import '../../index.css'; 
+import { RoadUpdatesHeader } from "./RoadUpdatesHeader";
 
 export function RoadUpdates() {
 
   return (
     <>
-      <Sidebar />
-      <h1>Traffic Flow</h1>
+      <RoadUpdatesHeader />
+
+      <section className="cctv-container">
+        <div className="cctv-feed">Hi</div>
+        
+      </section>
     </>
   );
 }

@@ -1,4 +1,6 @@
-h1 {
-  margin-left: 250px;
-  background-color: lightpink;
+.cctv-container {
+  margin-left: calc(var(--sidebar-w) + 30px);
+  margin-top: calc(var(--header-h) + 20px);
+  background-color: lightblue;
 }
+

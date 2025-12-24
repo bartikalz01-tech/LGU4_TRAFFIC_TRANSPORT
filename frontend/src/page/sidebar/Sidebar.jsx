@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../.././index.css';
 import './Sidebar.css';
 
-export function Sidebar() {
+export function Sidebar({ isOpen, onClose }) {
 
   const [active, setActive] = useState('Dashboard');
 
@@ -27,10 +27,15 @@ export function Sidebar() {
   }]
 
   return (
-    <nav className='sidebar-container'>
+    <nav className={`sidebar-container ${isOpen ? 'open' : ''}`}>
       <div className='sidebar-header'>
-        <i class="fas fa-traffic-light"></i>
-        <h2>Barangay (N/A) Traffic Management</h2>
+        <div className='sidebar-header-content'>
+          <i class="fas fa-traffic-light"></i>
+          <h2>Barangay (N/A) Traffic Management</h2>
+        </div>
+        <button className='sidebar-close-btn' onClick={onClose}>
+          <i class="fas fa-times"></i>
+        </button>
       </div>
 
       <div className='menu-items'>

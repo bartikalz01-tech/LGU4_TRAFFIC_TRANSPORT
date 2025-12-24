@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { RoadCondition } from "./RoadCondition";
 import { RoadUpdatesHeader } from "./RoadUpdatesHeader";
+import { Sidebar } from '../sidebar/Sidebar';
 //import rightArrowIcon from '../../assets/arrows_right_line.svg';
 import './RoadUpdates.css';
 import '../../index.css';
@@ -8,10 +9,18 @@ import '../../index.css';
 export function RoadUpdates({ roads }) {
 
   const [ currenntRoad, setCurrentRoad ] = useState({});
+  const [ sidebarOpen, setSidebarOpen ] = useState(false);
 
   return (
     <>
-      <RoadUpdatesHeader />
+      {sidebarOpen && (
+        <div 
+          className="sidebar-overlay"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+      <RoadUpdatesHeader onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
 
       <section className="cctv-container">
         {roads.map((road) => {

@@ -1,16 +1,18 @@
-import hamburgerMenu from '../../assets/hamburger-menu.svg';
+import arrowLeftFill from '../../assets/arrow_to_left_fill.svg';
 import './RoadCondition.css';
 import '../../index.css';
 
 export function RoadCondition({ road, onClose }) {
 
-  return(
+  return (
     <>
       <div className='road-condition-overlay'>
         <div className='road-condition-content'>
           <div className='cctv-options-container'>
             <div className='road-title-menu'>
-              <img className='hamburger-menu-logo' src={hamburgerMenu} />
+              <button className='close-btn' onClick={onClose}>
+                <img className='left-arrow-logo' src={arrowLeftFill} />
+              </button>
               <h2 className='road-name'>{road.roadName}</h2>
             </div>
 
@@ -22,7 +24,7 @@ export function RoadCondition({ road, onClose }) {
             </div>
 
             <div className='right-side'>
-              <button className='close-btn' onClick={onClose}>Close</button>
+              <h2>Predictive AI</h2>
             </div>
           </div>
           <div className='full-cctv-video'>

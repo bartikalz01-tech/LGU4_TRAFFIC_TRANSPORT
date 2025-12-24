@@ -73,6 +73,7 @@
   font-size: 50px;
 }
 
+/* Size of overlay */
 .sidebar-overlay {
   position: fixed;
   top: 0;

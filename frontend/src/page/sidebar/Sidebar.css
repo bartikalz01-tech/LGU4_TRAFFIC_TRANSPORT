@@ -7,11 +7,14 @@
   left: 0;
   width: 250px;
   box-shadow: 10px 0 10px rgba(0, 0, 0, 0.1);
+
+  /* Hide sidebar off-screen initially */
   transform: translateX(-100%);
   transition: transform 0.3s ease;
+
   z-index: 1000;
 }
-
+/* When sidebar is open */
 .sidebar-container.open {
   transform: translateX(0);
 }

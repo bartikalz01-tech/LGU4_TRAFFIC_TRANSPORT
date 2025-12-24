@@ -1,5 +1,6 @@
 import './RoadUpdateHeader.css'
 
+// Header receives menu click handler
 export function RoadUpdatesHeader({ onMenuClick }) {
   
   return (

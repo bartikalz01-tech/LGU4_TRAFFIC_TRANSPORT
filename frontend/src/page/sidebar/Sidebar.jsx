@@ -2,6 +2,9 @@ import { useState } from 'react';
 import '../.././index.css';
 import './Sidebar.css';
 
+// Sidebar component receives:
+// - isOpen: boolean that controls visibility
+// - onClose: function that to close the sidebar
 export function Sidebar({ isOpen, onClose }) {
 
   const [active, setActive] = useState('Dashboard');
@@ -27,6 +30,7 @@ export function Sidebar({ isOpen, onClose }) {
   }]
 
   return (
+    // Adds "open" class when isOpen === true
     <nav className={`sidebar-container ${isOpen ? 'open' : ''}`}>
       <div className='sidebar-header'>
         <div className='sidebar-header-content'>

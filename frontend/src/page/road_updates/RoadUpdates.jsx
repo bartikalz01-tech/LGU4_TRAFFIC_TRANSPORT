@@ -9,10 +9,13 @@ import '../../index.css';
 export function RoadUpdates({ roads }) {
 
   const [ currenntRoad, setCurrentRoad ] = useState({});
+
+  // Controls sidebar open/close
   const [ sidebarOpen, setSidebarOpen ] = useState(false);
 
   return (
     <>
+      {/* Overlay appears only when sidebar is open */}
       {sidebarOpen && (
         <div 
           className="sidebar-overlay"
@@ -20,6 +23,8 @@ export function RoadUpdates({ roads }) {
         />
       )}
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+      {/* sidebar toggle menu */}
       <RoadUpdatesHeader onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
 
       <section className="cctv-container">

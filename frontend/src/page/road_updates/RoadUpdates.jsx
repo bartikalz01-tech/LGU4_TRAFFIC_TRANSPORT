@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { RoadCondition } from "./RoadCondition";
 import { RoadUpdatesHeader } from "./RoadUpdatesHeader";
-import rightArrowIcon from '../../assets/arrows_right_line.svg';
+//import rightArrowIcon from '../../assets/arrows_right_line.svg';
 import './RoadUpdates.css';
 import '../../index.css';
 
@@ -21,7 +21,7 @@ export function RoadUpdates({ roads }) {
                 <p>{road.roadName}</p>
                 <div className="details-right-arrow" onClick={() => setCurrentRoad(road)}>
                   <p>View Details</p>
-                  <img src={rightArrowIcon} alt="Right arrow" className="icon-right" />
+                  <i class="fas fa-list" />
                 </div>
               </div>
 

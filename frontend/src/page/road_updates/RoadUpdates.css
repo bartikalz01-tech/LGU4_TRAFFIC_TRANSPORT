@@ -1,9 +1,10 @@
 .cctv-container {
-  margin-left: calc(var(--sidebar-w) + 20px);
   margin-top: calc(var(--header-h) + 20px);
+  margin-bottom: calc(var(--header-h) + 20px);
   margin-right: 20px;
+  margin-left: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   column-gap: 20px;
   row-gap: 40px;
 }
@@ -58,7 +59,7 @@
 .cctv-video {
   /*background-color: #1a1a1a;*/
   background-color: #d4d2d2;
-  height: 250px;
+  height: 300px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   display: flex;

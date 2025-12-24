@@ -43,10 +43,19 @@
 .left-arrow-logo {
   height: 30px;
   filter: brightness(0) invert(1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 30px; /* match text line-height */
 }
 
 .road-name {
   margin-left: 10px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 30px; /* match text line-height */
 }
 
 .cctv-controls { /* Mid Section */
@@ -134,6 +143,10 @@
   color: var(--light-color);
   font-weight: bold;
   margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 30px; /* match text line-height */
 }
 
 .right-side {

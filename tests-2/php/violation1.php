@@ -12,23 +12,23 @@ $pageTitle = 'Violation Ticketing System';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?> - Barangay (N/A)</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="stylesheet" href="css/global.css">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    <link rel="stylesheet" href="../css/global1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="css/sidebar.css">
-    <link rel="stylesheet" href="css/admin-header.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/hero.css">
-    <link rel="stylesheet" href="css/sidebar-footer.css">
-    <link rel="stylesheet" href="css/accident.css">
-    <link rel="stylesheet" href="css/violation1.css">
+    <link rel="stylesheet" href="../css/sidebar1.css">
+    <link rel="stylesheet" href="../css/admin-header1.css">
+    <link rel="stylesheet" href="../css/buttons1.css">
+    <link rel="stylesheet" href="../css/hero.css">
+    <link rel="stylesheet" href="../css/sidebar-footer.css">
+    <link rel="stylesheet" href="../css/accident.css">
+    <link rel="stylesheet" href="../css/violation1.css">
 </head>
 <body>
     <!-- Include Sidebar Component -->
-    <?php include 'includes/sidebar-traffic-only.php'; ?>
+    <?php include '../sidebar/sidebar-traffic-only.php'; ?>
 
     <!-- Include Admin Header Component -->
-    <?php include 'includes/admin-header.php'; ?>
+    <?php include '../sidebar/admin-header.php'; ?>
     
     <!-- ===================================
        MAIN CONTENT - Violation Ticketing

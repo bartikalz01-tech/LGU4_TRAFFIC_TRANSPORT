@@ -30,7 +30,7 @@ export function RoadUpdates({ roads }) {
       <section className="cctv-container">
         {roads.map((road) => {
           return(
-            <div id={road.id} className="cctv-feed">
+            <div key={road.id} id={road.id} className="cctv-feed">
               <div className='cctv-info'>
                 <p>{road.roadName}</p>
                 <div className="details-right-arrow" onClick={() => setCurrentRoad(road)}>

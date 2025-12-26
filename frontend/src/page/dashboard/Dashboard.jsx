@@ -1,10 +1,6 @@
-
-
 export function Dashboard() {
 
   return(
-    <>
-      <div>Dashboard page</div>
-    </>
+    <div>Dashboard page</div>
   );
 }
